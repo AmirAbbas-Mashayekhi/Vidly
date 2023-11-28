@@ -1,0 +1,25 @@
+{% extends "base.html" %} {% block title %}Movies{% endblock title %} {% block
+content %}
+
+<table class="table responsive-table table-hover-table-bordered">
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Genre</th>
+      <th>Stock</th>
+      <th>Daily Rate</th>
+    </tr>
+  </thead>
+  <tbody>
+    {% for movie in movies %}
+    <tr>
+      <td>{{movie.title}}</td>
+      <td>{{movie.genre}}</td>
+      <td>{{movie.number_in_stock}}</td>
+      <td>{{movie.daily_rental_rate}}</td>
+    </tr>
+    {% endfor %}
+  </tbody>
+</table>
+
+{% endblock content %}
